@@ -7,5 +7,5 @@ http://adventofcode.com/2017
 To test and run a solution:
 
 ```bash
-python 01.1/solution.py
+python3 01.1/solution.py
 ```
