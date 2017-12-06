@@ -4,8 +4,7 @@ def solve(input_file):
     with open(input_file) as file:
         input = [ int(line) for line in file ]
 
-    i = 0
-    count = 0
+    i, count = 0, 0
 
     while i >= 0 and i < len(input):
         offset = input[i]
