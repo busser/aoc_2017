@@ -20,10 +20,10 @@ def solve(input_file):
 
 def _test_solve():
     test_values = [
-        ("06.1/test_input_01.txt", 4),
+        ("06.2/test_input_01.txt", 4),
     ]
     for (input, output) in test_values:
         assert solve(input) == output
 
 _test_solve()
-print(solve("06.1/input.txt"))
+print(solve("06.2/input.txt"))
