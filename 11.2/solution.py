@@ -1,7 +1,5 @@
 #!/bin/python3
 
-from collections import Counter
-
 def solve(input_file):
     with open(input_file) as file:
         input = file.read()[:-1].split(",") # remove new line
