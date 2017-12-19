@@ -17,9 +17,7 @@ def solve(input_file):
         for depth, range in input.items():
 
             # constant-time compute of wether there is a collision
-            collided = (
-                range - 1 - abs((depth + delay) % (2 * (range - 1)) - (range - 1))
-            ) == 0
+            collided = (depth + delay) % (2 * (range - 1)) == 0
 
             if collided:
                 break
