@@ -2,7 +2,7 @@
 
 # despite my efforts to optimise this code, it runs in ~116 days (estimation).
 # i suspect that python is not at all suited for this type of exercise.
-# perhaps i will try to implement a solution in a lower-level language like go.
+# perhaps i will try to implement a solution in a lower-level language like rust.
 
 from string import ascii_letters
 
