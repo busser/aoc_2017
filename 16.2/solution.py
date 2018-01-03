@@ -19,11 +19,13 @@ def solve(input_file, nb_programs = 16, iterations = int(1e9)):
         for i in range(nb_programs):
             pos2id[id2pos[i]] = i
         return (id2pos, pos2id,)
+    
     def move_exchange(id2pos, pos2id, posA, posB):
         pos2id[posA], pos2id[posB] = pos2id[posB], pos2id[posA]
         id2pos[pos2id[posA]], id2pos[pos2id[posB]] = \
             id2pos[pos2id[posB]], id2pos[pos2id[posA]]
         return (id2pos, pos2id,)
+    
     def move_partner(id2pos, pos2id, idA, idB):
         id2pos[idA], id2pos[idB] = id2pos[idB], id2pos[idA]
         pos2id[id2pos[idA]], pos2id[id2pos[idB]] = \
@@ -39,11 +41,13 @@ def solve(input_file, nb_programs = 16, iterations = int(1e9)):
     def parse_spin(move):
         size = int(move[1:])
         return (size,)
+    
     def parse_exchange(move):
         split_move = move[1:].split("/")
         posA = int(split_move[0])
         posB = int(split_move[1])
         return (posA, posB,)
+    
     def parse_partner(move):
         split_move = move[1:].split("/")
         idA = ord(split_move[0]) - ord("a")
@@ -71,7 +75,7 @@ def _test_solve():
     test_values = [
         (("16.2/test_input_01.txt", 5, 2), "ceadb"),
     ]
-    for  ((input, nb_programs, iterations), output) in test_values:
+    for ((input, nb_programs, iterations), output) in test_values:
         assert solve(input, nb_programs, iterations) == output
 
 _test_solve()
